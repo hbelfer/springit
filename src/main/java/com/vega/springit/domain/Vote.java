@@ -8,20 +8,13 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
+@Data
 @NoArgsConstructor
-@RequiredArgsConstructor
-@Getter
-@Setter
-public class Vote extends Auditable {
-
+public class Vote  {
     @Id
     @GeneratedValue
     private Long id;
-
     @NonNull
-    private short direction;
-
-    @NonNull
-    @ManyToOne
-    private Link link;
+    private int vote ;
+  
 }
